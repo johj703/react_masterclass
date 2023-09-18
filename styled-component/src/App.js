@@ -31,10 +31,8 @@ const Box = styled.div`
   align-items: center;
   animation: ${rotationAnimation} 1s linear infinite;
   // 이 css와
-  ${Emoji} {
-    &:hover {
-      font-size: 98px;
-    }
+  ${Emoji}:hover {
+    font-size: 98px;
   }
 `;
 
