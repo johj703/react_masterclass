@@ -1,23 +1,11 @@
 import styled from "styled-components";
 
-const Father = styled.div`
+const Wrapper = styled.div`
   display: flex;
 `;
 
-const Input = styled.input.attrs({ required: true, minLength: 10 })`
-  background-color: tomato;
-`;
-
 function App() {
-  return (
-    <Father as="header">
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-    </Father>
-  );
+  return <Wrapper></Wrapper>;
 }
 
 export default App;
