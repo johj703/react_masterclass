@@ -13,7 +13,7 @@ const Btn = styled.button`
 
 function App() {
   return (
-    <Father>
+    <Father as="header">
       <Btn>Log in</Btn>
       <Btn as="a" href="/">
         Log in
