@@ -26,11 +26,21 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   animation: ${rotationAnimation} 1s linear infinite;
+  // 이 css와
   span {
     font-size: 36px;
     &:hover {
       font-size: 40px;
     }
+    &:active {
+      opacity: 0;
+    }
+  }
+  // 이 css는 같은 코드지만, 위의 방법이 가독성이 높다.
+  span:hover {
+    font-size: 40px;
+  }
+  span:active {
   }
 `;
 
