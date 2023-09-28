@@ -21,8 +21,6 @@ function App() {
   return (
    <Wrapper>
     <Box />
-    <div></div>
-    <motion.div></motion.div>
    </Wrapper>
   );
 }
