@@ -44,14 +44,23 @@ const boxVariants = {
   },
 };
 
+const circleVariants = {
+  start: {
+    opacity: 0,
+  },
+  end: {
+    opacity: 1,
+  },
+};
+
 function App() {
   return (
     <Wrapper>
       <Box variants={boxVariants} initial="start" animate="end">
-        <Circle />
-        <Circle />
-        <Circle />
-        <Circle />
+        <Circle variants={circleVariants} />
+        <Circle variants={circleVariants} />
+        <Circle variants={circleVariants} />
+        <Circle variants={circleVariants} />
       </Box>
     </Wrapper>
   );
