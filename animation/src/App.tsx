@@ -31,9 +31,16 @@ const Circle = styled(motion.div)`
 const boxVariants = {
   start: {
     opacity: 0,
+    scale: 0.5,
   },
   end: {
     opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+      bounce: 0.5,
+    },
   },
 };
 
