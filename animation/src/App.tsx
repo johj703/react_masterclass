@@ -22,7 +22,10 @@ const boxVariants = {};
 function App() {
   return (
     <Wrapper>
-      <Box whileHover={{ scale: 2 }} whileTap={{ borderRadius: "100px" }} />
+      <Box
+        whileHover={{ scale: 1.5, rotateZ: 90 }}
+        whileTap={{ borderRadius: "100px" }}
+      />
     </Wrapper>
   );
 }
