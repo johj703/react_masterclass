@@ -24,7 +24,7 @@ function App() {
     <Wrapper>
       <Box
         whileHover={{ scale: 1.5, rotateZ: 90 }}
-        whileTap={{ borderRadius: "100px" }}
+        whileTap={{ scale: 1, borderRadius: "100px" }}
       />
     </Wrapper>
   );
