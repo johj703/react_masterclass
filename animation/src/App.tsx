@@ -42,10 +42,9 @@ function App() {
       <BiggerBox ref={biggerBoxRef}>
         <Box
           drag
-          dragConstraints={{ top: -200, bottom: 200, left: -200, right: 200 }}
+          dragConstraints={biggerBoxRef}
           variants={boxVariants}
           whileHover="hover"
-          whileDrag="drag"
           whileTap="click"
         />
       </BiggerBox>
