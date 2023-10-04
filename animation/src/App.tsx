@@ -18,7 +18,6 @@ const BiggerBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 `;
 
 const Box = styled(motion.div)`
@@ -43,6 +42,7 @@ function App() {
         <Box
           drag
           dragSnapToOrigin
+          dragElastic={0.5}
           dragConstraints={biggerBoxRef}
           variants={boxVariants}
           whileHover="hover"
