@@ -27,7 +27,8 @@ function App() {
   return (
     <Wrapper>
       <Box
-        drag="y"
+        drag
+        dragConstraints={{ top: -50, bottom: 50, left: -50, right: 50 }}
         variants={boxVariants}
         whileHover="hover"
         whileDrag="drag"
