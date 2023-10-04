@@ -9,6 +9,13 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
+const BiggerBox = styled.div`
+  width: 600px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 40px;
+`;
+
 const Box = styled(motion.div)`
   width: 200px;
   height: 200px;
@@ -26,14 +33,16 @@ const boxVariants = {
 function App() {
   return (
     <Wrapper>
-      <Box
-        drag
-        dragConstraints={{ top: -50, bottom: 50, left: -50, right: 50 }}
-        variants={boxVariants}
-        whileHover="hover"
-        whileDrag="drag"
-        whileTap="click"
-      />
+      <BiggerBox>
+        <Box
+          drag
+          dragConstraints={{ top: -50, bottom: 50, left: -50, right: 50 }}
+          variants={boxVariants}
+          whileHover="hover"
+          whileDrag="drag"
+          whileTap="click"
+        />
+      </BiggerBox>
     </Wrapper>
   );
 }
