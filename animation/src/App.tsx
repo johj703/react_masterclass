@@ -14,6 +14,9 @@ const BiggerBox = styled.div`
   height: 600px;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Box = styled(motion.div)`
