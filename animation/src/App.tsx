@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -18,9 +18,11 @@ const Box = styled(motion.div)`
 `;
 
 function App() {
+  const x = useMotionValue(0);
+  console.log(x);
   return (
     <Wrapper>
-      <Box />
+      <Box style={{ x }} drag="x" dragSnapToOrigin />
     </Wrapper>
   );
 }
