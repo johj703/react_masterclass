@@ -20,11 +20,9 @@ const Box = styled(motion.div)`
 
 function App() {
   const x = useMotionValue(0);
-  useEffect(() => {
-    x.onChange(() => console.log(x.get()));
-  }, [x]);
   return (
     <Wrapper>
+      <button onClick={() => x.set(200)}>click me</button>
       <Box style={{ x }} drag="x" dragSnapToOrigin />
     </Wrapper>
   );
