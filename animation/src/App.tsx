@@ -20,11 +20,11 @@ const Box = styled(motion.div)`
 
 function App() {
   const x = useMotionValue(0);
-  const scale = useTransform(x, [-800, 0, 800], [2, 1, 0.1]);
+  const rotateZ = useTransform(x, [-800, 800], [-360, 360]);
  
   return (
     <Wrapper>
-      <Box style={{ x, scale }} drag="x" dragSnapToOrigin />
+      <Box style={{ x, rotateZ }} drag="x" dragSnapToOrigin />
     </Wrapper>
   );
 }
