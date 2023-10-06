@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useMotionValue, useTransform, useViewportScroll } from "framer-motion";
+import { useEffect } from "react";
 
 const Wrapper = styled(motion.div)`
   height: 100vh;
@@ -29,6 +30,12 @@ function App() {
       "linear-gradient(135deg, rgb(0, 238, 155), rgb(238, 238, 0))"
   ]
   );
+  const {scrollY, scrollYProgress} = useViewportScroll();
+  useEffect(() => {
+    scrollY.onChange(() => {
+      console.log(scrollY.get(), scrollYProgress.get());
+    });
+  }, [scrollYProgress, scrollY])
   return (
     <Wrapper style={{background: gradient}}>
       <Box style={{ x, rotateZ }} drag="x" dragSnapToOrigin />
