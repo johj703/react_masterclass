@@ -21,10 +21,7 @@ const Box = styled(motion.div)`
 function App() {
   const x = useMotionValue(0);
   const potato = useTransform(x, [-800, 0, 800], [2, 1, 0.1]);
-  useEffect(() => {
-   // x.onChange(() => console.log(x.get()));
-   potato.onChange(() => console.log(potato.get()));
-  }, [x]);
+ 
   return (
     <Wrapper>
       <Box style={{ x, scale: potato }} drag="x" dragSnapToOrigin />
