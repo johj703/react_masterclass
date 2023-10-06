@@ -8,7 +8,6 @@ const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ;
 `;
 
 const Box = styled(motion.div)`
