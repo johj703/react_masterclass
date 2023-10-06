@@ -23,10 +23,9 @@ function App() {
   const rotateZ = useTransform(x, [-800, 800], [-360, 360]);
   const gradient = useTransform(
     x, 
-    [-800, 0, 800], 
+    [-800, 800], 
     [
       "linear-gradient(135deg, rgb(0, 210, 238), rgb(0, 83, 238))",
-      "linear-gradient(135deg, rgb(238, 0, 153), rgb(221, 0, 238))",
       "linear-gradient(135deg, rgb(0, 238, 155), rgb(238, 238, 0))"
   ]
   );
