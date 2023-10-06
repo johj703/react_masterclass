@@ -3,7 +3,7 @@ import { motion, useMotionValue, useTransform, useViewportScroll } from "framer-
 import { useEffect } from "react";
 
 const Wrapper = styled(motion.div)`
-  height: 100vh;
+  height: 500vh;
   width: 100vw;
   display: flex;
   justify-content: center;
