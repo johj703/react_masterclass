@@ -3,7 +3,7 @@ import { motion, useMotionValue, useTransform, useViewportScroll } from "framer-
 import { useEffect } from "react";
 
 const Wrapper = styled(motion.div)`
-  height: 500vh;
+  height: 200vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -30,9 +30,10 @@ function App() {
   ]
   );
   const { scrollYProgress} = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 5]);
   return (
     <Wrapper style={{background: gradient}}>
-      <Box style={{ x, rotateZ, scale: scrollYProgress}} drag="x" dragSnapToOrigin />
+      <Box style={{ x, rotateZ, scale}} drag="x" dragSnapToOrigin />
     </Wrapper>
   );
 }
