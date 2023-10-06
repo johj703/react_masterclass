@@ -29,15 +29,10 @@ function App() {
       "linear-gradient(135deg, rgb(0, 238, 155), rgb(238, 238, 0))"
   ]
   );
-  const {scrollY, scrollYProgress} = useViewportScroll();
-  useEffect(() => {
-    scrollY.onChange(() => {
-      console.log(scrollY.get(), scrollYProgress.get());
-    });
-  }, [scrollYProgress, scrollY])
+  const { scrollYProgress} = useViewportScroll();
   return (
     <Wrapper style={{background: gradient}}>
-      <Box style={{ x, rotateZ }} drag="x" dragSnapToOrigin />
+      <Box style={{ x, rotateZ, scale: scrollYProgress}} drag="x" dragSnapToOrigin />
     </Wrapper>
   );
 }
