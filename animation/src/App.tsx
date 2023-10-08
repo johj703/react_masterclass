@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Wrapper = styled(motion.div)`
   height: 100vh;
@@ -20,10 +21,11 @@ const Box = styled(motion.div)`
 `;
 
 function App() {
+  const [showing, setShowing] = useState(false);
   return (
     <Wrapper>
       <button>Click</button>
-      <Box />
+      {showing ? <Box /> : null}
     </Wrapper>
   );
 }
