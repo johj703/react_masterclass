@@ -8,5 +8,22 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.27"
+  },
+  "name": "react_masterclass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johj703/react_masterclass.git"
+  },
+  "author": "Jo <johj703@nate.com>",
+  "license": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/johj703/react_masterclass/issues"
+  },
+  "homepage": "https://github.com/johj703/react_masterclass#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
