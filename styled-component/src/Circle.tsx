@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface CircleProps {
   bgColor: string;
-  borderColor: string;
+  borderColor?: string;
 }
 
 const Container = styled.div<CircleProps>``;
