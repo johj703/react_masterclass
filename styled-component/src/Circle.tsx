@@ -5,3 +5,5 @@ const Container = styled.div``;
 function Circle() {
   return <Container />;
 }
+
+export default Circle;
