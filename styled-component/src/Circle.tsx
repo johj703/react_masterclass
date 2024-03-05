@@ -7,8 +7,8 @@ interface CircleProps {
 
 const Container = styled.div<CircleProps>``;
 
-function Circle({ bgColor }: CircleProps) {
-  return <Container bgColor={bgColor} />;
+function Circle({ bgColor, borderColor }: CircleProps) {
+  return <Container bgColor={bgColor} borderColor={borderColor} />;
 }
 
 export default Circle;
