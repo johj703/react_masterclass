@@ -5,7 +5,12 @@ interface CircleProps {
   borderColor?: string;
 }
 
-const Container = styled.div<CircleProps>``;
+const Container = styled.div<CircleProps>`
+  width: 200px;
+  height: 200px;
+  background-color: ${(props) => props.bgColor};
+  border-radius: 100px;
+`;
 
 function Circle({ bgColor, borderColor }: CircleProps) {
   return <Container bgColor={bgColor} borderColor={borderColor} />;
