@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
-const Container = styled.div``;
+interface CircleProps {
+  bgColor: string;
+  borderColor: string;
+}
 
-function Circle() {
-  return <Container />;
+const Container = styled.div<CircleProps>``;
+
+function Circle({ bgColor }: CircleProps) {
+  return <Container bgColor={bgColor} />;
 }
 
 export default Circle;
