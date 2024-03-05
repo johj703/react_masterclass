@@ -1,5 +1,11 @@
+import Circle from "./Circle";
+
 function App() {
-  return <div />;
+  return (
+    <div>
+      <Circle />
+    </div>
+  );
 }
 
 export default App;
