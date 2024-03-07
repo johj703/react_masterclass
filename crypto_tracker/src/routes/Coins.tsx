@@ -1,4 +1,10 @@
+import styled from "styled-components";
+
+const Title = styled.div`
+  color: ${(props) => props.theme.accentColor};
+`;
+
 function Coins() {
-  return <h1>Coins</h1>
+  return <Title>코인</Title>;
 }
 export default Coins;
