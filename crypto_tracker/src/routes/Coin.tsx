@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -31,10 +32,11 @@ interface RouteParams {
 function Coin() {
   const [loading, setLoading] = useState(true);
   const { coinId } = useParams<RouteParams>();
+  const location = useLocation();
   return (
     <Container>
       <Header>
-        <Title>코인</Title>
+        <Title>코인 {coinId}</Title>
       </Header>
       {loading ? <Loader>Loading...</Loader> : null}
     </Container>
