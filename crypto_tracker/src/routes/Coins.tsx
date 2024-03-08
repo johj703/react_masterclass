@@ -20,6 +20,11 @@ const Coin = styled.li`
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 10px;
+  &:hover {
+    a {
+      color: ${(props) => props.theme.accentColor};
+    }
+  }
 `;
 
 const Title = styled.div`
