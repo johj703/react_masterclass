@@ -22,6 +22,7 @@ const Coin = styled.li`
   margin-bottom: 10px;
   a {
     transition: color 0.2s ease-in;
+    display: block;
   }
   &:hover {
     a {
