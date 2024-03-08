@@ -46,8 +46,8 @@ const Loader = styled.span`
 `;
 
 const Img = styled.img`
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   margin-right: 10px;
 `;
 // https://api.coinpaprika.com/v1/coins
