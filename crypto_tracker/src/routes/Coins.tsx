@@ -44,6 +44,7 @@ const Loader = styled.span`
   display: block;
 `;
 // https://api.coinpaprika.com/v1/coins
+// https://coinicons-api.vercel.app/
 
 interface CoinInterface {
   id: string;
@@ -78,7 +79,12 @@ function Coins() {
         <CoinList>
           {coins.map((coin) => (
             <Coin key={coin.id}>
-              <Link to={`/${coin.id}`}>{coin.name} &rarr;</Link>
+              <Link to={`/${coin.id}`}>
+                <img
+                  src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
+                />
+                {coin.name} &rarr;
+              </Link>
             </Coin>
           ))}
         </CoinList>
