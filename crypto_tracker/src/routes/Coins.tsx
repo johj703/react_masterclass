@@ -43,6 +43,11 @@ const Loader = styled.span`
   text-align: center;
   display: block;
 `;
+
+const Img = styled.img`
+  width: 25px;
+  height: 25px;
+`;
 // https://api.coinpaprika.com/v1/coins
 // https://coinicons-api.vercel.app/
 
@@ -80,7 +85,7 @@ function Coins() {
           {coins.map((coin) => (
             <Coin key={coin.id}>
               <Link to={`/${coin.id}`}>
-                <img
+                <Img
                   src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
                 />
                 {coin.name} &rarr;
