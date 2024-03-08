@@ -23,9 +23,10 @@ const Coin = styled.li`
   border-radius: 15px;
   margin-bottom: 10px;
   a {
+    display: flex;
+    align-items: center;
     padding: 20px;
     transition: color 0.2s ease-in;
-    display: block;
   }
   &:hover {
     a {
@@ -47,6 +48,7 @@ const Loader = styled.span`
 const Img = styled.img`
   width: 25px;
   height: 25px;
+  margin-right: 10px;
 `;
 // https://api.coinpaprika.com/v1/coins
 // https://coinicons-api.vercel.app/
