@@ -51,7 +51,7 @@ interface CoinInterface {
 }
 
 function Coins() {
-  const [coins, setCoins] = useState([]);
+  const [coins, setCoins] = useState<CoinInterface[]>([]);
   return (
     <Container>
       <Header>
