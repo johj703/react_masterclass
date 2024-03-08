@@ -64,7 +64,7 @@ function Coins() {
       </Header>
       <CoinList>
         {coins.map((coin) => (
-          <Coin key={coin.id}>{coin.name}</Coin>
+          <Coin key={coin.id}>{coin.name} &rarr;</Coin>
         ))}
       </CoinList>
     </Container>
