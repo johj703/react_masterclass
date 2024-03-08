@@ -49,8 +49,8 @@ function Coins() {
         <Title>코인</Title>
       </Header>
       <CoinList>
-        {coins.map((coins) => (
-          <Coin></Coin>
+        {coins.map((coin) => (
+          <Coin key={coin.id}>{coin.name}</Coin>
         ))}
       </CoinList>
     </Container>
