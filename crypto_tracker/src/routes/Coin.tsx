@@ -41,7 +41,7 @@ function Coin() {
   return (
     <Container>
       <Header>
-        <Title>코인 {coinId}</Title>
+        <Title>{state.name}</Title>
       </Header>
       {loading ? <Loader>Loading...</Loader> : null}
     </Container>
