@@ -50,8 +50,6 @@ const Img = styled.img`
   height: 35px;
   margin-right: 10px;
 `;
-// https://api.coinpaprika.com/v1/coins
-// https://coinicons-api.vercel.app/
 
 interface CoinInterface {
   id: string;
@@ -62,6 +60,9 @@ interface CoinInterface {
   is_active: boolean;
   type: string;
 }
+
+// https://api.coinpaprika.com/v1/coins
+// https://coinicons-api.vercel.app/
 
 function Coins() {
   const [coins, setCoins] = useState<CoinInterface[]>([]);
