@@ -13,6 +13,12 @@ const Title = styled.div`
 `;
 
 function Coins() {
-  return <Title>코인</Title>;
+  return (
+    <Container>
+      <Header>
+        <Title>코인</Title>
+      </Header>
+    </Container>
+  );
 }
 export default Coins;
