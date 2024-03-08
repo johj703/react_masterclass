@@ -49,7 +49,9 @@ function Coins() {
         <Title>코인</Title>
       </Header>
       <CoinList>
-        <Coin></Coin>
+        {coins.map((coins) => (
+          <Coin></Coin>
+        ))}
       </CoinList>
     </Container>
   );
