@@ -18,6 +18,9 @@ function Coins() {
       <Header>
         <Title>코인</Title>
       </Header>
+      <CoinList>
+        <Coin></Coin>
+      </CoinList>
     </Container>
   );
 }
