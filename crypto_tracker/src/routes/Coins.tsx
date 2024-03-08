@@ -1,14 +1,28 @@
 import styled from "styled-components";
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 0px 20px;
+`;
 
-const Header = styled.header``;
+const Header = styled.header`
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const CoinList = styled.ul``;
 
-const Coin = styled.li``;
+const Coin = styled.li`
+  background-color: white;
+  color: ${(props) => props.theme.bgColor};
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+`;
 
 const Title = styled.div`
+  font-size: 48px;
   color: ${(props) => props.theme.accentColor};
 `;
 // https://api.coinpaprika.com/v1/coins
