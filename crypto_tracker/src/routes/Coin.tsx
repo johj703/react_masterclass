@@ -33,6 +33,35 @@ interface RouteState {
   name: string;
 }
 
+interface InfoData {
+  id: string;
+  name: string;
+  symbol: string;
+  rank: number;
+  is_new: boolean;
+  is_active: boolean;
+  type: string;
+  logo: string;
+  tags: object;
+  team: object;
+  description: string;
+  message: string;
+  open_source: boolean;
+  started_at: string;
+  development_status: string;
+  hardware_wallet: boolean;
+  proof_type: string;
+  org_structure: string;
+  hash_algorithm: string;
+  links: object;
+  links_extended: object;
+  whitepaper: object;
+  first_data_at: string;
+  last_data_at: string;
+}
+
+interface PriceData {}
+
 function Coin() {
   const [loading, setLoading] = useState(true);
   const { coinId } = useParams<RouteParams>();
@@ -44,9 +73,11 @@ function Coin() {
       const infoData = await (
         await fetch(`https://api.coinpaprika.com/v1/coins/${coinId}`)
       ).json();
+      console.log(infoData);
       const priceData = await (
         await fetch(`https://api.coinpaprika.com/v1/tickers/${coinId}`)
       ).json();
+      console.log(priceData);
       setInfo(infoData);
       setPriceInfo(priceData);
     })();
