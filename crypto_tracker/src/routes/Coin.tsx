@@ -92,8 +92,8 @@ function Coin() {
   const [loading, setLoading] = useState(true);
   const { coinId } = useParams<RouteParams>();
   const { state } = useLocation<RouteState>();
-  const [info, setInfo] = useState<InfoData>({});
-  const [priceInfo, setPriceInfo] = useState({});
+  const [info, setInfo] = useState<InfoData>();
+  const [priceInfo, setPriceInfo] = useState<PriceData>();
   useEffect(() => {
     (async () => {
       const infoData = await (
