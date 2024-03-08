@@ -51,9 +51,6 @@ interface InfoData {
   proof_type: string;
   org_structure: string;
   hash_algorithm: string;
-  links: object;
-  links_extended: object;
-  whitepaper: object;
   first_data_at: string;
   last_data_at: string;
 }
