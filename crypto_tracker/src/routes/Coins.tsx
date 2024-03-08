@@ -38,6 +38,11 @@ const Title = styled.div`
   font-size: 48px;
   color: ${(props) => props.theme.accentColor};
 `;
+
+const Loader = styled.span`
+  text-align: center;
+  display: block;
+`;
 // https://api.coinpaprika.com/v1/coins
 
 interface CoinInterface {
@@ -58,7 +63,7 @@ function Coins() {
       const response = await fetch("https://api.coinpaprika.com/v1/coins");
       const json = await response.json();
       setCoins(json.slice(0, 100));
-      setLoading(false);
+      // setLoading(false);
     })();
   }, []);
   console.log(coins);
@@ -67,13 +72,17 @@ function Coins() {
       <Header>
         <Title>코인</Title>
       </Header>
-      <CoinList>
-        {coins.map((coin) => (
-          <Coin key={coin.id}>
-            <Link to={`/${coin.id}`}>{coin.name} &rarr;</Link>
-          </Coin>
-        ))}
-      </CoinList>
+      {loading ? (
+        <Loader>Loading...</Loader>
+      ) : (
+        <CoinList>
+          {coins.map((coin) => (
+            <Coin key={coin.id}>
+              <Link to={`/${coin.id}`}>{coin.name} &rarr;</Link>
+            </Coin>
+          ))}
+        </CoinList>
+      )}
     </Container>
   );
 }
