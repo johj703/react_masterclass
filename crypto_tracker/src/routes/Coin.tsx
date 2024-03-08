@@ -39,9 +39,9 @@ function Coin() {
   const { state } = useLocation<RouteState>();
   useEffect(() => {
     (async () => {
-      const response = await fetch(
-        `https://api.coinpaprika.com/v1/coins/${coinId}`
-      );
+      const response = await (
+        await fetch(`https://api.coinpaprika.com/v1/{coinId}`)
+      ).json();
     })();
   }, []);
   return (
