@@ -33,13 +33,6 @@ interface RouteState {
   name: string;
 }
 
-interface ITag {
-  coin_counter: number;
-  ico_counter: number;
-  id: string;
-  name: string;
-}
-
 interface InfoData {
   id: string;
   name: string;
@@ -49,8 +42,6 @@ interface InfoData {
   is_active: boolean;
   type: string;
   logo: string;
-  tags: ITag[];
-  team: object;
   description: string;
   message: string;
   open_source: boolean;
