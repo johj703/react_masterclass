@@ -29,10 +29,15 @@ interface RouteParams {
   coinId: string;
 }
 
+interface RouteState {
+  name: string;
+}
+
 function Coin() {
   const [loading, setLoading] = useState(true);
   const { coinId } = useParams<RouteParams>();
-  const location = useLocation();
+  const { state } = useLocation<RouteState>();
+  console.log(state.name);
   return (
     <Container>
       <Header>
