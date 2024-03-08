@@ -20,6 +20,9 @@ const Coin = styled.li`
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 10px;
+  a {
+    transition: color 0.2s ease-in;
+  }
   &:hover {
     a {
       color: ${(props) => props.theme.accentColor};
