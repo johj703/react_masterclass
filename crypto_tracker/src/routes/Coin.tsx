@@ -48,6 +48,14 @@ const OverviewItem = styled.div`
     margin-bottom: 5px;
   }
 `;
+
+const Tabs = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 25px 0px;
+  gap: 10px;
+`;
+
 const Description = styled.p`
   margin: 20px 0px;
 `;
@@ -169,8 +177,10 @@ function Coin() {
               <span>{priceInfo?.max_supply}</span>
             </OverviewItem>
           </Overview>
-          <Link to={`/${coinId}/chart`}>Chart</Link>
-          <Link to={`/${coinId}/price`}>Price</Link>
+          <Tabs>
+            <Link to={`/${coinId}/chart`}>Chart</Link>
+            <Link to={`/${coinId}/price`}>Price</Link>
+          </Tabs>
           <Switch>
             <Route path={`/${coinId}/price`}>
               <Price />
