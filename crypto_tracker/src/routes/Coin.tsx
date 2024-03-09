@@ -168,6 +168,7 @@ function Coin() {
   //     setLoading(false);
   //   })();
   // }, [coinId]);
+  const loading = infoLoading || tickersLoading;
   return (
     <Container>
       <Header>
