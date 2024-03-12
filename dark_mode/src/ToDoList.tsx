@@ -36,12 +36,31 @@ function ToDoList() {
   };
   return (
     <form onSubmit={handleSubmit(onValid)}>
-      <input {...register("Email")} placeholder="Email" />
-      <input {...register("firstName")} placeholder="First Name" />
-      <input {...register("lastName")} placeholder="Last Name" />
-      <input {...register("username")} placeholder="Username" />
-      <input {...register("password")} placeholder="Password" />
-      <input {...register("password1")} placeholder="Password1" />
+      <input
+        {...register("Email", { required: true })}
+        required
+        placeholder="Email"
+      />
+      <input
+        {...register("firstName", { required: true })}
+        placeholder="First Name"
+      />
+      <input
+        {...register("lastName", { required: true })}
+        placeholder="Last Name"
+      />
+      <input
+        {...register("username", { required: true })}
+        placeholder="Username"
+      />
+      <input
+        {...register("password", { required: true })}
+        placeholder="Password"
+      />
+      <input
+        {...register("password1", { required: true })}
+        placeholder="Password1"
+      />
       <button>Add</button>
     </form>
   );
