@@ -72,7 +72,7 @@ function ToDoList() {
       />
       <span>{errors?.username?.message as string}</span>
       <input
-        {...register("password", { required: true, minLength: 5 })}
+        {...register("password", { required: "write here", minLength: 5 })}
         placeholder="Password"
       />
       <span>{errors?.password?.message as string}</span>
