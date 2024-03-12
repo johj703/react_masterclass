@@ -7,6 +7,7 @@ function ToDoList() {
     const {
       currentTarget: { value },
     } = event;
+    setToDoError("");
     setTodo(value);
   };
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
