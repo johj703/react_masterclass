@@ -54,11 +54,11 @@ function ToDoList() {
         placeholder="Username"
       />
       <input
-        {...register("password", { required: true })}
+        {...register("password", { required: true, minLength: 5 })}
         placeholder="Password"
       />
       <input
-        {...register("password1", { required: true })}
+        {...register("password1", { required: true, minLength: 5 })}
         placeholder="Password1"
       />
       <button>Add</button>
