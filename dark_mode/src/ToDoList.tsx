@@ -30,9 +30,10 @@ import { useForm } from "react-hook-form";
 // }
 
 function ToDoList() {
+  const { register, watch } = useForm();
   return (
     <form>
-      <input placeholder="Write a to do" />
+      <input {...register("Email")} placeholder="Write a to do" />
       <button>Add</button>
     </form>
   );
