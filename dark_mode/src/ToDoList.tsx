@@ -30,10 +30,11 @@ import { useForm } from "react-hook-form";
 // }
 
 function ToDoList() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState } = useForm();
   const onValid = (data: any) => {
     console.log(data);
   };
+  console.log(formState.errors);
   return (
     <form
       style={{ display: "flex", flexDirection: "column" }}
@@ -61,7 +62,10 @@ function ToDoList() {
         placeholder="Password"
       />
       <input
-        {...register("password1", { required: true, minLength: 5 })}
+        {...register("password1", {
+          required: "Password is required",
+          minLength: 5,
+        })}
         placeholder="Password1"
       />
       <button>Add</button>
