@@ -73,22 +73,22 @@ function ToDoList() {
         {...register("firstName", { required: "write here" })}
         placeholder="First Name"
       />
-      <span>{errors?.firstName?.message as string}</span>
+      <span>{errors?.firstName?.message}</span>
       <input
         {...register("lastName", { required: "write here" })}
         placeholder="Last Name"
       />
-      <span>{errors?.lastName?.message as string}</span>
+      <span>{errors?.lastName?.message}</span>
       <input
         {...register("username", { required: "write here", minLength: 10 })}
         placeholder="Username"
       />
-      <span>{errors?.username?.message as string}</span>
+      <span>{errors?.username?.message}</span>
       <input
         {...register("password", { required: "write here", minLength: 5 })}
         placeholder="Password"
       />
-      <span>{errors?.password?.message as string}</span>
+      <span>{errors?.password?.message}</span>
       <input
         {...register("password1", {
           required: "Password is required",
@@ -99,7 +99,7 @@ function ToDoList() {
         })}
         placeholder="Password1"
       />
-      <span>{errors?.password1?.message as string}</span>
+      <span>{errors?.password1?.message}</span>
       <button>Add</button>
     </form>
   );
