@@ -64,7 +64,10 @@ function ToDoList() {
       <input
         {...register("password1", {
           required: "Password is required",
-          minLength: 5,
+          minLength: {
+            value: 5,
+            message: "Your password is too short.",
+          },
         })}
         placeholder="Password1"
       />
