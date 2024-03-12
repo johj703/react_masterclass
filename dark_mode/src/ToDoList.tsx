@@ -21,6 +21,7 @@ function ToDoList() {
       <form onSubmit={onSubmit}>
         <input onChange={onChange} value={toDo} placeholder="Write a to do" />
         <button>Add</button>
+        {toDoError !== "" ? toDoError : null}
       </form>
     </div>
   );
