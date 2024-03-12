@@ -29,6 +29,15 @@ import { useForm } from "react-hook-form";
 //   );
 // }
 
+interface IForm {
+  Email: string;
+  firstName: string;
+  lastName: string;
+  username: string;
+  password: string;
+  password1: string;
+}
+
 function ToDoList() {
   const {
     register,
