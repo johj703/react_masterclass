@@ -8,6 +8,10 @@ function ToDoList() {
     } = event;
     setValue(value);
   };
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(value);
+  };
   return (
     <div>
       <form>
