@@ -55,9 +55,7 @@ function ToDoList() {
         required
         placeholder="Email"
       />
-      <span>
-        {errors.email.type === "required" ? "email required"}
-      </span>
+      <span>{errors?.email?.message as string}</span>
       <input
         {...register("firstName", { required: true })}
         placeholder="First Name"
