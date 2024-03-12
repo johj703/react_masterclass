@@ -48,7 +48,7 @@ function ToDoList() {
       email: "@naver.com",
     },
   });
-  const onValid = (data: any) => {
+  const onValid = (data: IForm) => {
     console.log(data);
   };
   console.log(errors);
