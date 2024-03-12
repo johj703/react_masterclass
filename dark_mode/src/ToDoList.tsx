@@ -36,6 +36,7 @@ interface IForm {
   username: string;
   password: string;
   password1: string;
+  extraError?: string;
 }
 
 function ToDoList() {
@@ -53,6 +54,7 @@ function ToDoList() {
     if (data.password !== data.password1) {
       setError("password1", { message: "Password are not the same" });
     }
+    setError("extraError", { message: "Server offline." });
   };
   console.log(errors);
   return (
