@@ -50,7 +50,7 @@ function ToDoList() {
         placeholder="Last Name"
       />
       <input
-        {...register("username", { required: true })}
+        {...register("username", { required: true, minLength: 10 })}
         placeholder="Username"
       />
       <input
