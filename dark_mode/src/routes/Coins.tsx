@@ -66,7 +66,7 @@ interface ICoin {
 
 interface ICoinsProps {}
 
-function Coins({}: ICoinsProps) {
+function Coins() {
   const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
   return (
     <Container>
