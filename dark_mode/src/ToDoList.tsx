@@ -57,17 +57,17 @@ function ToDoList() {
       />
       <span>{errors?.email?.message as string}</span>
       <input
-        {...register("firstName", { required: true })}
+        {...register("firstName", { required: "write here" })}
         placeholder="First Name"
       />
       <span>{errors?.firstName?.message as string}</span>
       <input
-        {...register("lastName", { required: true })}
+        {...register("lastName", { required: "write here" })}
         placeholder="Last Name"
       />
       <span>{errors?.lastName?.message as string}</span>
       <input
-        {...register("username", { required: true, minLength: 10 })}
+        {...register("username", { required: "write here", minLength: 10 })}
         placeholder="Username"
       />
       <span>{errors?.username?.message as string}</span>
