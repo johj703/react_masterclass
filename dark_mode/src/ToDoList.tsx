@@ -43,7 +43,10 @@ function ToDoList() {
       <input
         {...register("Email", {
           required: true,
-          pattern: /^[A-Za-z0-9._%+-]+@naver.com$/,
+          pattern: {
+            value: /^[A-Za-z0-9._%+-]+@naver.com$/,
+            message: "Only naver.com emails allowed",
+          },
         })}
         required
         placeholder="Email"
