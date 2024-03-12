@@ -30,9 +30,12 @@ import { useForm } from "react-hook-form";
 // }
 
 function ToDoList() {
-  const { register, watch } = useForm();
+  const { register, handleSubmit } = useForm();
+  const onValid = (data: any) => {
+    console.log(data);
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit(onValid)}>
       <input {...register("Email")} placeholder="Email" />
       <button>Add</button>
     </form>
