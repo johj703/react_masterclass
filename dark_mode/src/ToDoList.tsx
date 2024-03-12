@@ -14,7 +14,7 @@ function ToDoList() {
   };
   return (
     <div>
-      <form>
+      <form onSubmit={onSubmit}>
         <input onChange={onChange} value={toDO} placeholder="Write a to do" />
         <button>Add</button>
       </form>
