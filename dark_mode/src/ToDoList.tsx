@@ -43,7 +43,7 @@ function ToDoList() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<IForm>();
   const onValid = (data: any) => {
     console.log(data);
   };
@@ -64,7 +64,7 @@ function ToDoList() {
         required
         placeholder="Email"
       />
-      <span>{errors?.email?.message as string}</span>
+      <span>{errors?.Email?.message}</span>
       <input
         {...register("firstName", { required: "write here" })}
         placeholder="First Name"
