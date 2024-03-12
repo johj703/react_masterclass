@@ -30,7 +30,7 @@ import { useForm } from "react-hook-form";
 // }
 
 interface IForm {
-  Email: string;
+  email: string;
   firstName: string;
   lastName: string;
   username: string;
@@ -54,7 +54,7 @@ function ToDoList() {
       onSubmit={handleSubmit(onValid)}
     >
       <input
-        {...register("Email", {
+        {...register("email", {
           required: "Email is required",
           pattern: {
             value: /^[A-Za-z0-9._%+-]+@naver.com$/,
@@ -62,9 +62,9 @@ function ToDoList() {
           },
         })}
         required
-        placeholder="Email"
+        placeholder="email"
       />
-      <span>{errors?.Email?.message}</span>
+      <span>{errors?.email?.message}</span>
       <input
         {...register("firstName", { required: "write here" })}
         placeholder="First Name"
