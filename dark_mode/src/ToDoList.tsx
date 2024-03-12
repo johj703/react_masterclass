@@ -33,7 +33,7 @@ function ToDoList() {
   const { register, watch } = useForm();
   return (
     <form>
-      <input {...register("Email")} placeholder="Write a to do" />
+      <input {...register("Email")} placeholder="Email" />
       <button>Add</button>
     </form>
   );
