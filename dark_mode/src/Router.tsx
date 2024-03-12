@@ -14,7 +14,7 @@ function Router({ toggleDark }: IRouterProps) {
           <Coin />
         </Route>
         <Route path="/">
-          <Coins />
+          <Coins toggleDark={toggleDark} />
         </Route>
       </Switch>
     </BrowserRouter>
