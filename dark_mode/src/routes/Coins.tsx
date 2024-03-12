@@ -69,7 +69,7 @@ interface ICoin {
 interface ICoinsProps {}
 
 function Coins() {
-  const setterFn = useSetRecoilState(isDarkAtom);
+  const setDarkAtom = useSetRecoilState(isDarkAtom);
   const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
   return (
     <Container>
@@ -78,7 +78,9 @@ function Coins() {
       </Helmet>
       <Header>
         <Title>코인</Title>
-        <button onClick={() => setterFn((prev) => !prev)}>Toggle Mode</button>
+        <button onClick={() => setDarkAtom((prev) => !prev)}>
+          Toggle Mode
+        </button>
       </Header>
       {isLoading ? (
         <Loader>Loading...</Loader>
