@@ -6,7 +6,7 @@ interface IRouterProps {
   toggleDark: () => void;
 }
 
-function Router() {
+function Router({ toggleDark }: IRouterProps) {
   return (
     <BrowserRouter>
       <Switch>
