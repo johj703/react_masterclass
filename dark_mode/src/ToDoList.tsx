@@ -106,6 +106,7 @@ function ToDoList() {
       />
       <span>{errors?.password1?.message}</span>
       <button>Add</button>
+      <span>{errors?.extraError?.message}</span>
     </form>
   );
 }
