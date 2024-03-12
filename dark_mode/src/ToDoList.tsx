@@ -41,7 +41,10 @@ function ToDoList() {
       onSubmit={handleSubmit(onValid)}
     >
       <input
-        {...register("Email", { required: true })}
+        {...register("Email", {
+          required: true,
+          pattern: /^[A-Za-z0-9._%+-]+@naver.com$/,
+        })}
         required
         placeholder="Email"
       />
