@@ -35,7 +35,10 @@ function ToDoList() {
     console.log(data);
   };
   return (
-    <form onSubmit={handleSubmit(onValid)}>
+    <form
+      style={{ display: "flex", flexDirection: "column" }}
+      onSubmit={handleSubmit(onValid)}
+    >
       <input
         {...register("Email", { required: true })}
         required
