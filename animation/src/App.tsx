@@ -25,7 +25,7 @@ function App() {
   const toggleShowing = () => setShowing((prev) => !prev);
   return (
     <Wrapper>
-      <button>Click</button>
+      <button onClick={toggleShowing}>Click</button>
       {showing ? <Box /> : null}
     </Wrapper>
   );
