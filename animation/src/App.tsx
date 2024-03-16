@@ -32,7 +32,8 @@ const boxVariants = {
   },
   leaving: {
     opacity: 0,
-    y: 20,
+    scale : 0,
+    y: 50,
   },
 }
 
