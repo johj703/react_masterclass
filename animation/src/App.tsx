@@ -15,15 +15,20 @@ const Box = styled(motion.div)`
   height: 200px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 40px;
-  position: absolute;
-  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
 
 function App() {
   return (
     <Wrapper>
-      <Box></Box>
+      <AnimatePresence>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+          <Box key={i}>{i}</Box>
+        ))}
+      </AnimatePresence>
     </Wrapper>
   );
 }
