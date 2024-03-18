@@ -16,6 +16,8 @@ const Box = styled(motion.div)`
   height: 200px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 40px;
+  position: absolute;
+  top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +37,7 @@ const box = {
     scale: 1,
   },
   exit: {
-    x: 500,
+    x: -500,
     opacity: 0,
     scale: 0,
   },
