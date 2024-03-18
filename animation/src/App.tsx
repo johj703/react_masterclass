@@ -26,11 +26,11 @@ const Box = styled(motion.div)`
 `;
 
 const box = {
-  entry: {
+  entry: (back: boolean) => ({
     x: 500,
     opacity: 0,
     scale: 0,
-  },
+  }),
   center: {
     x: 0,
     opacity: 1,
@@ -39,24 +39,32 @@ const box = {
       duration: 1,
     },
   },
-  exit: {
+  exit: (back: boolean) => ({
     x: -500,
     opacity: 0,
     scale: 0,
     transition: {
       duration: 1,
     },
-  },
+  }),
 };
 
 function App() {
   const [visible, setVisible] = useState(1);
-  const nextPlease = () => setVisible((prev) => (prev === 10 ? 10 : prev + 1));
-  const prevPlease = () => setVisible((prev) => (prev === 1 ? 1 : prev - 1));
+  const [back, setBack] = useState(false);
+  const nextPlease = () => {
+    setBack(false);
+    setVisible((prev) => (prev === 10 ? 10 : prev + 1));
+  };
+  const prevPlease = () => {
+    setBack(true);
+    setVisible((prev) => (prev === 1 ? 1 : prev - 1));
+  };
   return (
     <Wrapper>
-      <AnimatePresence>
+      <AnimatePresence custom={back}>
         <Box
+          custom={back}
           variants={box}
           initial="entry"
           animate="center"
