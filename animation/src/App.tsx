@@ -24,6 +24,7 @@ const Box = styled(motion.div)`
 
 function App() {
   const [visible, setVisible] = useState(1);
+  const nextPlease = () => setVisible((prev) => (prev === 10 ? 10 : prev + 1));
   return (
     <Wrapper>
       <AnimatePresence>
@@ -31,6 +32,7 @@ function App() {
           i === visible ? <Box key={i}>{i}</Box> : null
         )}
       </AnimatePresence>
+      <button onClick={nextPlease}>next</button>
     </Wrapper>
   );
 }
