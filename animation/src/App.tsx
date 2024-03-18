@@ -26,12 +26,12 @@ const Box = styled(motion.div)`
 `;
 
 const box = {
-  invisible: {
+  entry: {
     x: 500,
     opacity: 0,
     scale: 0,
   },
-  visible: {
+  center: {
     x: 0,
     opacity: 1,
     scale: 1,
@@ -58,9 +58,9 @@ function App() {
       <AnimatePresence>
         <Box
           variants={box}
-          initial="invisible"
-          animate="visible"
-          exit="exits"
+          initial="entry"
+          animate="center"
+          exit="exit"
           key={visible}
         >
           {visible}
