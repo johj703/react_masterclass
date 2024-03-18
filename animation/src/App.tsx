@@ -42,7 +42,7 @@ const box = {
   exit: {
     x: -500,
     opacity: 0,
-    scale: 0,
+    rotateX: 0,
     transition: {
       duration: 1,
     },
