@@ -26,7 +26,7 @@ function App() {
     <Wrapper>
       <AnimatePresence>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
-          <Box key={i}></Box>
+          <Box key={i}>{i}</Box>
         ))}
       </AnimatePresence>
     </Wrapper>
