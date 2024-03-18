@@ -36,7 +36,7 @@ const box = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 1,
+      duration: 0.3,
     },
   },
   exit: (isBack: boolean) => ({
@@ -44,7 +44,7 @@ const box = {
     opacity: 0,
     scale: 0,
     transition: {
-      duration: 1,
+      duration: 0.3,
     },
   }),
 };
