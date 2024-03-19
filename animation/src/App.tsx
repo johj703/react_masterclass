@@ -52,7 +52,7 @@ function App() {
   return (
     <Wrapper onClick={toggle}>
       <Grid>
-        <Box />
+        <Box layoutId="hello" />
         <Box />
         <Box />
         <Box />
@@ -64,7 +64,7 @@ function App() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <Box style={{ width: 400, height: 200 }} />
+            <Box layoutId="hello" style={{ width: 400, height: 200 }} />
           </Overlay>
         ) : null}
       </AnimatePresence>
