@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const Wrapper = styled(motion.div)`
@@ -36,7 +36,7 @@ const Circle = styled(motion.div)`
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
 
-const Overlay = styled.div`
+const Overlay = styled(motion.div)`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -44,15 +44,25 @@ const Overlay = styled.div`
 `;
 
 function App() {
+  const [clicked, setClicked] = useState(false);
+  const toggle = () => setClicked((prev) => !prev);
   return (
-    <Wrapper>
+    <Wrapper onClick={toggle}>
       <Grid>
         <Box />
         <Box />
         <Box />
         <Box />
       </Grid>
-      <Overlay></Overlay>
+      <AnimatePresence>
+        {clicked ? (
+          <Overlay
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          ></Overlay>
+        ) : null}
+      </AnimatePresence>
     </Wrapper>
   );
 }
