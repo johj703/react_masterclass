@@ -11,6 +11,11 @@ const Wrapper = styled(motion.div)`
   flex-direction: column;
 `;
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`;
+
 const Box = styled(motion.div)`
   width: 400px;
   height: 400px;
@@ -30,20 +35,14 @@ const Circle = styled(motion.div)`
 `;
 
 function App() {
-  const [clicked, setClicked] = useState(false);
-  const toggleClicked = () => setClicked((prev) => !prev);
   return (
-    <Wrapper onClick={toggleClicked}>
-      <Box>
-        {!clicked ? (
-          <Circle layoutId="circle" style={{ borderRadius: 50 }} />
-        ) : null}
-      </Box>
-      <Box>
-        {clicked ? (
-          <Circle layoutId="circle" style={{ borderRadius: 0, scale: 2 }} />
-        ) : null}
-      </Box>
+    <Wrapper>
+      <Grid>
+        <Box />
+        <Box />
+        <Box />
+        <Box />
+      </Grid>
     </Wrapper>
   );
 }
