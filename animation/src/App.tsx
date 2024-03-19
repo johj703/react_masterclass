@@ -57,8 +57,9 @@ function App() {
         ))}
       </Grid>
       <AnimatePresence>
-        {false ? (
+        {id ? (
           <Overlay
+            onClick={() => setId(null)}
             initial={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
             animate={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
             exit={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
