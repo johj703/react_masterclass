@@ -60,9 +60,9 @@ function App() {
       <AnimatePresence>
         {clicked ? (
           <Overlay
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+            animate={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
+            exit={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
           >
             <Box layoutId="hello" style={{ width: 400, height: 200 }} />
           </Overlay>
