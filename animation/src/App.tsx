@@ -64,7 +64,7 @@ function App() {
             animate={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
             exit={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
           >
-            <Box layoutId="hello" style={{ width: 400, height: 200 }} />
+            <Box layoutId={id} style={{ width: 400, height: 200 }} />
           </Overlay>
         ) : null}
       </AnimatePresence>
