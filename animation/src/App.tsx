@@ -36,6 +36,13 @@ const Circle = styled(motion.div)`
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
 
+const Overlay = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+`;
+
 function App() {
   return (
     <Wrapper>
@@ -45,6 +52,7 @@ function App() {
         <Box />
         <Box />
       </Grid>
+      <Overlay></Overlay>
     </Wrapper>
   );
 }
