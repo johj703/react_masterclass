@@ -41,7 +41,7 @@ function App() {
       </Box>
       <Box>
         {clicked ? (
-          <Circle layoutId="circle" style={{ borderRadius: 0 }} />
+          <Circle layoutId="circle" style={{ borderRadius: 0, scale: 2 }} />
         ) : null}
       </Box>
     </Wrapper>
