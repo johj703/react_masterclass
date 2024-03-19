@@ -48,6 +48,7 @@ const Overlay = styled(motion.div)`
 
 function App() {
   const [id, setId] = useState<null | string>(null);
+  console.log(id);
   return (
     <Wrapper>
       <Grid>
@@ -56,7 +57,7 @@ function App() {
         ))}
       </Grid>
       <AnimatePresence>
-        {clicked ? (
+        {false ? (
           <Overlay
             initial={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
             animate={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
