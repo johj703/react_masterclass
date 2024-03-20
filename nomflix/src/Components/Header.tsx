@@ -8,9 +8,14 @@ const Nav = styled.nav`
   width: 100%;
   top: 0;
   background-color: red;
+  height: 80px;
+  font-size: 12px;
 `;
 
-const Col = styled.div``;
+const Col = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const Logo = styled.svg`
   margin-right: 50px;
