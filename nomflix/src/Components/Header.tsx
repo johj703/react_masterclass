@@ -1,6 +1,7 @@
 import { Link, useMatch } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Nav = styled.nav`
   display: flex;
@@ -51,6 +52,8 @@ const Item = styled.li`
 
 const Search = styled.span`
   color: white;
+  display: flex;
+  align-items: center;
   svg {
     height: 25px;
   }
@@ -68,6 +71,8 @@ const Circle = styled(motion.span)`
   background-color: ${(props) => props.theme.red};
 `;
 
+const Input = styled(motion.input)``;
+
 const logoVariants = {
   normal: {
     fillOpacity: 1,
@@ -81,8 +86,10 @@ const logoVariants = {
 };
 
 function Header() {
+  const [searchOpen, setSearchOpen] = useState(false);
   const homeMatch = useMatch("/");
   const tvMatch = useMatch("tv");
+  const openSearch = () => setSearchOpen(true);
   return (
     <Nav>
       <Col>
@@ -109,7 +116,7 @@ function Header() {
         </Items>
       </Col>
       <Col>
-        <Search>
+        <Search onClick={openSearch}>
           <svg
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -121,6 +128,10 @@ function Header() {
               clipRule="evenodd"
             ></path>
           </svg>
+          <Input
+            animate={{ scaleX: searchOpen ? 1 : 0 }}
+            placeholder="Search for movie or tv show!"
+          />
         </Search>
       </Col>
     </Nav>
