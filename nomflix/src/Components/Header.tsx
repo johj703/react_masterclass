@@ -54,6 +54,7 @@ const Search = styled.span`
   color: white;
   display: flex;
   align-items: center;
+  position: relative;
   svg {
     height: 25px;
   }
@@ -73,6 +74,8 @@ const Circle = styled(motion.span)`
 
 const Input = styled(motion.input)`
   transform-origin: right center;
+  position: absolute;
+  left: -180px;
 `;
 
 const logoVariants = {
