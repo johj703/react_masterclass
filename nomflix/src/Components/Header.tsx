@@ -6,6 +6,10 @@ const Col = styled.div``;
 
 const Logo = styled.svg``;
 
+const Items = styled.ul``;
+
+const Item = styled.li``;
+
 function Header() {
   return (
     <Nav>
