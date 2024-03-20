@@ -7,9 +7,10 @@ const Nav = styled.nav`
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: red;
-  height: 80px;
-  font-size: 12px;
+  background-color: black;
+  font-size: 14px;
+  padding: 20px 60px;
+  color: white;
 `;
 
 const Col = styled.div`
@@ -19,6 +20,13 @@ const Col = styled.div`
 
 const Logo = styled.svg`
   margin-right: 50px;
+  width: 95px;
+  height: 25px;
+  fill: ${(props) => props.theme.red};
+  path {
+    stroke-width: 6px;
+    stroke: white;
+  }
 `;
 
 const Items = styled.ul`
@@ -28,6 +36,15 @@ const Items = styled.ul`
 
 const Item = styled.li`
   margin-right: 20px;
+  color: ${(props) => props.theme.white.darker};
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &:hover {
+    color: ${(props) => props.theme.white.lighter};
+  }
 `;
 
 function Header() {
