@@ -15,12 +15,10 @@ const Nav = styled.nav`
   padding: 20px 60px;
   color: white;
 `;
-
 const Col = styled.div`
   display: flex;
   align-items: center;
 `;
-
 const Logo = styled(motion.svg)`
   margin-right: 50px;
   width: 95px;
@@ -31,12 +29,10 @@ const Logo = styled(motion.svg)`
     stroke: white;
   }
 `;
-
 const Items = styled.ul`
   display: flex;
   align-items: center;
 `;
-
 const Item = styled.li`
   margin-right: 20px;
   color: ${(props) => props.theme.white.darker};
@@ -146,5 +142,4 @@ function Header() {
     </Nav>
   );
 }
-
 export default Header;
