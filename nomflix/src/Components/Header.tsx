@@ -3,14 +3,13 @@ import styled from "styled-components";
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: black;
   font-size: 14px;
   padding: 20px 60px;
   color: white;
@@ -115,7 +114,7 @@ function Header() {
     scrollY.onChange(() => console.log(scrollY.get()));
   }, [scrollY]);
   return (
-    <Nav>
+    <Nav initial={{ backgroundColor: "rgba(0, 0, 0, 1)" }}>
       <Col>
         <Logo
           variants={logoVariants}
