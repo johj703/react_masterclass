@@ -113,7 +113,7 @@ function Header() {
   };
   useEffect(() => {
     scrollY.onChange(() => console.log(scrollY.get()));
-  }, []);
+  }, [scrollY]);
   return (
     <Nav>
       <Col>
