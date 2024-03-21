@@ -97,7 +97,14 @@ function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const homeMatch = useMatch("/");
   const tvMatch = useMatch("tv");
-  const toggleSearch = () => setSearchOpen((prev) => !prev);
+  const toggleSearch = () => {
+    if (searchOpen) {
+      // trigger the close animation
+    } else {
+      // trigger the open animation
+    }
+    setSearchOpen((prev) => !prev);
+  };
   return (
     <Nav>
       <Col>
