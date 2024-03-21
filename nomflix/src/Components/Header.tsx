@@ -97,6 +97,7 @@ function Header() {
   const homeMatch = useMatch("/");
   const tvMatch = useMatch("tv");
   const inputAnimation = useAnimation();
+  const navAnimation = useAnimation();
   const { scrollY } = useScroll();
   const toggleSearch = () => {
     if (searchOpen) {
@@ -111,10 +112,23 @@ function Header() {
     setSearchOpen((prev) => !prev);
   };
   useEffect(() => {
-    scrollY.onChange(() => console.log(scrollY.get()));
+    scrollY.onChange(() => {
+      if (scrollY.get() > 80) {
+        navAnimation.start({
+          backgroundColor: "rgba(0, 0, 0, 1)",
+        });
+      } else {
+        navAnimation.start({
+          backgroundColor: "rgba(0, 0, 0, 0)",
+        });
+      }
+    });
   }, [scrollY]);
   return (
-    <Nav initial={{ backgroundColor: "rgba(0, 0, 0, 1)" }}>
+    <Nav
+      animate={navAnimation}
+      initial={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+    >
       <Col>
         <Logo
           variants={logoVariants}
