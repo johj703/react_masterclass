@@ -1,8 +1,8 @@
 import { useQuery } from "react-query";
-import { getMovies } from "../api";
+import { IGetMovieResult, getMovies } from "../api";
 
 function Home() {
-  const { data, isLoading } = useQuery({
+  const { data, isLoading } = useQuery<IGetMovieResult>({
     queryKey: ["movies", "nowPlaying"],
     queryFn: getMovies,
   });
