@@ -9,7 +9,7 @@ interface IMovie {
   overview: string;
 }
 
-export interface IGetMovieResult {
+export interface IGetMoviesResult {
   dates: {
     maximum: string;
     minimum: string;
