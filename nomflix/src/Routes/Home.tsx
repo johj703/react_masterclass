@@ -67,6 +67,22 @@ function Home() {
               <Box />
               <Box />
             </Row>
+            <Row>
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+            </Row>
+            <Row>
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+            </Row>
           </Slider>
         </>
       )}
