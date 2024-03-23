@@ -44,7 +44,7 @@ const Slider = styled.div`
 
 const Row = styled(motion.div)`
   display: grid;
-  gap: 5px;
+  gap: 10px;
   grid-template-columns: repeat(6, 1fr);
   position: absolute;
   width: 100%;
@@ -59,13 +59,13 @@ const Box = styled(motion.div)`
 
 const rowVariants = {
   hidden: {
-    x: window.outerWidth + 5,
+    x: window.outerWidth + 10,
   },
   visible: {
     x: 0,
   },
   exit: {
-    x: -window.outerWidth - 5,
+    x: -window.outerWidth - 10,
   },
 };
 
