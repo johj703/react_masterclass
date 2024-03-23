@@ -16,6 +16,7 @@ const Loader = styled.div`
 const Banner = styled.div`
   height: 10vh;
   display: flex;
+  flex-direction: column;
 `;
 
 const Title = styled.h2``;
