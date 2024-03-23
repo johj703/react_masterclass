@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
-import { IGetMovieResult, getMovies } from "../api";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { IGetMovieResult, getMovies } from "../api";
 import { makeImagePath } from "../utils";
 
 const Wrapper = styled.div`
@@ -35,6 +36,12 @@ const Overview = styled.p`
   width: 50%;
 `;
 
+const Slider = styled.div``;
+
+const Row = styled(motion.div)``;
+
+const Box = styled(motion.div)``;
+
 function Home() {
   const { data, isLoading } = useQuery<IGetMovieResult>({
     queryKey: ["movies", "nowPlaying"],
@@ -51,6 +58,16 @@ function Home() {
             <Title>{data?.results[0].title}</Title>
             <Overview>{data?.results[0].overview}</Overview>
           </Banner>
+          <Slider>
+            <Row>
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+              <Box />
+            </Row>
+          </Slider>
         </>
       )}
     </Wrapper>
