@@ -13,12 +13,34 @@ const Loader = styled.div`
   align-items: center;
 `;
 
+const Banner = styled.div`
+  height: 10vh;
+  display: flex;
+`;
+
+const Title = styled.h2``;
+
+const Overview = styled.p``;
+
 function Home() {
   const { data, isLoading } = useQuery<IGetMovieResult>({
     queryKey: ["movies", "nowPlaying"],
     queryFn: getMovies,
   });
   console.log(data, isLoading);
-  return <Wrapper>{isLoading ? <Loader>Loading</Loader> : null}</Wrapper>;
+  return (
+    <Wrapper>
+      {isLoading ? (
+        <Loader>Loading</Loader>
+      ) : (
+        <>
+          <Banner>
+            <Title>{data?.results[0].title}</Title>
+            <Overview>{data?.results[0].overview}</Overview>
+          </Banner>
+        </>
+      )}
+    </Wrapper>
+  );
 }
 export default Home;
