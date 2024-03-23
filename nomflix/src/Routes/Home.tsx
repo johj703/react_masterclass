@@ -21,9 +21,15 @@ const Banner = styled.div`
   padding: 60px;
 `;
 
-const Title = styled.h2``;
+const Title = styled.h2`
+  font-size: 68px;
+  margin-bottom: 20px;
+`;
 
-const Overview = styled.p``;
+const Overview = styled.p`
+  font-size: 30px;
+  width: 50%;
+`;
 
 function Home() {
   const { data, isLoading } = useQuery<IGetMovieResult>({
