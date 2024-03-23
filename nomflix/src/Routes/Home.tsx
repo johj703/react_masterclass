@@ -17,6 +17,8 @@ const Banner = styled.div`
   height: 10vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 60px;
 `;
 
 const Title = styled.h2``;
