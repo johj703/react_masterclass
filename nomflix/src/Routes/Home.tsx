@@ -1,5 +1,17 @@
 import { useQuery } from "react-query";
 import { IGetMovieResult, getMovies } from "../api";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  background: black;
+`;
+
+const Loader = styled.div`
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function Home() {
   const { data, isLoading } = useQuery<IGetMovieResult>({
@@ -7,6 +19,6 @@ function Home() {
     queryFn: getMovies,
   });
   console.log(data, isLoading);
-  return <div style={{ backgroundColor: "black", height: "200vh" }}>Home</div>;
+  return <Wrapper>{isLoading ? <Loader>Loading</Loader> : null}</Wrapper>;
 }
 export default Home;
