@@ -98,6 +98,10 @@ const BigMovie = styled(motion.div)`
   margin: 0 auto;
 `;
 
+const BigCover = styled.img``;
+
+const BigTitle = styled.h3``;
+
 const rowVariants = {
   hidden: {
     x: window.outerWidth + 10,
