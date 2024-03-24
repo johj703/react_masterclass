@@ -162,6 +162,11 @@ function Home() {
     navigate(`/movies/${movieId}`);
   };
   const onOverlayClick = () => navigate(-1);
+  const clickedMovie =
+    bigMovieMatch?.params.movieId &&
+    data?.results.find(
+      (movie) => String(movie.id) === bigMovieMatch.params.movieId
+    );
   return (
     <Wrapper>
       {isLoading ? (
