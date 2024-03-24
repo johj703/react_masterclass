@@ -167,6 +167,7 @@ function Home() {
     data?.results.find(
       (movie) => String(movie.id) === bigMovieMatch.params.movieId
     );
+  console.log(clickedMovie);
   return (
     <Wrapper>
       {isLoading ? (
@@ -224,7 +225,11 @@ function Home() {
                   style={{ top: scrollY.get() + 100 }}
                   layoutId={bigMovieMatch.params.movieId}
                 >
-                  hello
+                  {clickedMovie && (
+                    <>
+                      <h2>{clickedMovie.title}</h2>
+                    </>
+                  )}
                 </BigMovie>
               </>
             ) : null}
