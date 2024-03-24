@@ -82,7 +82,7 @@ function Home() {
     if (data) {
       if (leaving) return;
       toggleLeaving();
-      const totalMovies = data?.results.length;
+      const totalMovies = data?.results.length - 1;
       const maxIndex = Math.ceil(totalMovies / offset);
       setIndex((prev) => prev + 1);
     }
