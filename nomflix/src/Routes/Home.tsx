@@ -232,10 +232,10 @@ function Home() {
                 >
                   {clickedMovie && (
                     <>
-                      <img
+                      <BigCover
                         src={makeImagePath(clickedMovie.backdrop_path, "w500")}
                       />
-                      <h2>{clickedMovie.title}</h2>
+                      <BigTitle>{clickedMovie.title}</BigTitle>
                     </>
                   )}
                 </BigMovie>
