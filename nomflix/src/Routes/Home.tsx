@@ -69,6 +69,8 @@ const rowVariants = {
   },
 };
 
+const offset = 6;
+
 function Home() {
   const { data, isLoading } = useQuery<IGetMoviesResult>(
     ["movies", "nowPlaying"],
