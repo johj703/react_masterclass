@@ -89,6 +89,15 @@ const Overlay = styled(motion.div)`
   opacity: 0;
 `;
 
+const BigMovie = styled(motion.div)`
+  position: absolute;
+  width: 40vw;
+  height: 80vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+`;
+
 const rowVariants = {
   hidden: {
     x: window.outerWidth + 10,
@@ -206,21 +215,12 @@ function Home() {
                   exit={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                 />
-                <motion.div
+                <BigMovie
+                  style={{ top: scrollY.get() + 100 }}
                   layoutId={bigMovieMatch.params.movieId}
-                  style={{
-                    position: "absolute",
-                    width: "40vw",
-                    height: "80vh",
-                    backgroundColor: "red",
-                    top: scrollY.get() + 100,
-                    left: 0,
-                    right: 0,
-                    margin: "0 auto",
-                  }}
                 >
                   hello
-                </motion.div>
+                </BigMovie>
               </>
             ) : null}
           </AnimatePresence>
