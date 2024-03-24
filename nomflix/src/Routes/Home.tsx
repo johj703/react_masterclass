@@ -96,6 +96,8 @@ const BigMovie = styled(motion.div)`
   left: 0;
   right: 0;
   margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
   background-color: ${(props) => props.theme.black.lighter};
 `;
 
