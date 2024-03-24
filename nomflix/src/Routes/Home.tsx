@@ -86,6 +86,7 @@ const Overlay = styled(motion.div)`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
 `;
 
 const rowVariants = {
@@ -200,7 +201,7 @@ function Home() {
           <AnimatePresence>
             {bigMovieMatch ? (
               <>
-                <Overlay onClick={onOverlayClick} />
+                <Overlay onClick={onOverlayClick} animate={{ opacity: 1 }} />
                 <motion.div
                   layoutId={bigMovieMatch.params.movieId}
                   style={{
