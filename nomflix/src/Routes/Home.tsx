@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { getMovies, IGetMoviesResult } from "../api";
 import { makeImagePath } from "../utils";
 import { useState } from "react";
@@ -132,7 +132,7 @@ const offset = 6;
 function Home() {
   const navigate = useNavigate();
   const bigMovieMatch: PathMatch<string> | null = useMatch("/movies/:movieId");
-  console.log(bigMovieMatch);
+  const { scrollY } = useScroll();
   const { data, isLoading } = useQuery<IGetMoviesResult>(
     ["movies", "nowPlaying"],
     getMovies
@@ -213,7 +213,7 @@ function Home() {
                     width: "40vw",
                     height: "80vh",
                     backgroundColor: "red",
-                    top: 50,
+                    top: scrollY,
                     left: 0,
                     right: 0,
                     margin: "0 auto",
