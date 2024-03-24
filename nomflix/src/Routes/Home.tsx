@@ -57,7 +57,6 @@ const Box = styled(motion.div)<{ bgPhoto: string }>`
   background-position: center center;
   height: 200px;
   font-size: 66px;
-  position: relative;
   &:first-child {
     transform-origin: center left;
   }
@@ -96,7 +95,6 @@ const boxVariants = {
     scale: 1,
   },
   hover: {
-    zIndex: 99,
     scale: 1.3,
     y: -50,
     transition: {
