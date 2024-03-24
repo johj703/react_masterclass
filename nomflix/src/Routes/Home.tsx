@@ -50,10 +50,10 @@ const Row = styled(motion.div)`
   width: 100%;
 `;
 
-const Box = styled(motion.div)`
+const Box = styled(motion.div)<{ bgPhoto: string }>`
   background-color: white;
+  background-image: url(${(props) => props.bgPhoto});
   height: 200px;
-  color: red;
   font-size: 66px;
 `;
 
@@ -115,7 +115,10 @@ function Home() {
                   .slice(1)
                   .slice(offset * index, offset * index + offset)
                   .map((movie) => (
-                    <Box key={movie.id}>{movie.title}</Box>
+                    <Box
+                      key={movie.id}
+                      bgPhoto={makeImagePath(movie.backdrop_path)}
+                    />
                   ))}
               </Row>
             </AnimatePresence>
