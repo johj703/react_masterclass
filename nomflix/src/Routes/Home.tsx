@@ -96,6 +96,7 @@ const BigMovie = styled(motion.div)`
   left: 0;
   right: 0;
   margin: 0 auto;
+  background-color: ${(props) => props.theme.black.lighter};
 `;
 
 const BigCover = styled.img``;
