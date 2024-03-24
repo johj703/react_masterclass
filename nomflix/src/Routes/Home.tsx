@@ -99,9 +99,11 @@ const BigMovie = styled(motion.div)`
   background-color: ${(props) => props.theme.black.lighter};
 `;
 
-const BigCover = styled.img`
+const BigCover = styled.div`
   width: 100%;
-  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
 `;
 
 const BigTitle = styled.h3`
@@ -238,7 +240,12 @@ function Home() {
                   {clickedMovie && (
                     <>
                       <BigCover
-                        src={makeImagePath(clickedMovie.backdrop_path, "w500")}
+                        style={{
+                          backgroundImage: `linear-gradient(to top, black, transparent), url(${makeImagePath(
+                            clickedMovie.backdrop_path,
+                            "w500"
+                          )})`,
+                        }}
                       />
                       <BigTitle>{clickedMovie.title}</BigTitle>
                     </>
