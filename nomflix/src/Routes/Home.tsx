@@ -68,6 +68,7 @@ const Box = styled(motion.div)<{ bgPhoto: string }>`
 const Info = styled(motion.div)`
   padding: 20px;
   background-color: ${(props) => props.theme.black.lighter};
+  opacity: 0;
 `;
 
 const rowVariants = {
@@ -94,6 +95,12 @@ const boxVariants = {
       duration: 0.3,
       type: "tween",
     },
+  },
+};
+
+const infoVariants = {
+  hover: {
+    opacity: 1,
   },
 };
 
@@ -151,7 +158,7 @@ function Home() {
                       transition={{ type: "tween" }}
                       bgPhoto={makeImagePath(movie.backdrop_path, "w500")}
                     >
-                      <Info />
+                      <Info variants={infoVariants} />
                     </Box>
                   ))}
               </Row>
