@@ -117,7 +117,7 @@ function Home() {
                   .map((movie) => (
                     <Box
                       key={movie.id}
-                      bgPhoto={makeImagePath(movie.backdrop_path)}
+                      bgPhoto={makeImagePath(movie.backdrop_path, "w500")}
                     />
                   ))}
               </Row>
