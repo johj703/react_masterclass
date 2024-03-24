@@ -201,7 +201,11 @@ function Home() {
           <AnimatePresence>
             {bigMovieMatch ? (
               <>
-                <Overlay onClick={onOverlayClick} animate={{ opacity: 1 }} />
+                <Overlay
+                  onClick={onOverlayClick}
+                  exit={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                />
                 <motion.div
                   layoutId={bigMovieMatch.params.movieId}
                   style={{
