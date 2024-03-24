@@ -110,6 +110,8 @@ const BigCover = styled.div`
 
 const BigTitle = styled.h3`
   color: ${(props) => props.theme.white.lighter};
+  text-align: center;
+  font-size: 36px;
 `;
 
 const rowVariants = {
