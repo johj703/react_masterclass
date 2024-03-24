@@ -227,6 +227,9 @@ function Home() {
                 >
                   {clickedMovie && (
                     <>
+                      <img
+                        src={makeImagePath(clickedMovie.backdrop_path, "w500")}
+                      />
                       <h2>{clickedMovie.title}</h2>
                     </>
                   )}
