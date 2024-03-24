@@ -77,8 +77,9 @@ const boxVariants = {
   },
   hover: {
     scale: 1.3,
+    y: -50,
     transition: {
-      delay: 2,
+      delay: 0.5,
     },
   },
 };
