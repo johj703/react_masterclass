@@ -83,7 +83,7 @@ function Home() {
       if (leaving) return;
       toggleLeaving();
       const totalMovies = data?.results.length - 1;
-      const maxIndex = Math.ceil(totalMovies / offset);
+      const maxIndex = Math.ceil(totalMovies / offset) - 1;
       setIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
     }
   };
