@@ -99,9 +99,14 @@ const BigMovie = styled(motion.div)`
   background-color: ${(props) => props.theme.black.lighter};
 `;
 
-const BigCover = styled.img``;
+const BigCover = styled.img`
+  width: 100%;
+  height: 200px;
+`;
 
-const BigTitle = styled.h3``;
+const BigTitle = styled.h3`
+  color: ${(props) => props.theme.white.lighter};
+`;
 
 const rowVariants = {
   hidden: {
