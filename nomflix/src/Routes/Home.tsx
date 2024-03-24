@@ -151,6 +151,7 @@ function Home() {
   const onBoxClicked = (movieId: number) => {
     navigate(`/movies/${movieId}`);
   };
+  const onOverlayClick = () => navigate(-1);
   return (
     <Wrapper>
       {isLoading ? (
@@ -199,7 +200,7 @@ function Home() {
           <AnimatePresence>
             {bigMovieMatch ? (
               <>
-                <Overlay />
+                <Overlay onClick={onOverlayClick} />
                 <motion.div
                   layoutId={bigMovieMatch.params.movieId}
                   style={{
